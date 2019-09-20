@@ -12,11 +12,12 @@
 </head>
 <body>
 
-    <h1>Navbar</h1>
+    <h3>Sliding Navbar</h3>
+
+    <button onclick="toggleNav()" style="float: right; margin-right: 280px;">Open/Close Nav</button>
+
 
     <div class="navbar">
-
-        <button>Open/Close Nav</button>
 
         <a href="#" class="navbar_link"><span class="material-icons">home</span> Home</a>
 
@@ -26,5 +27,11 @@
 
         <a href="#" class="navbar_link"><span class="material-icons">exit_to_app</span> Logout</a>
     </div>
+
+    <script>
+        function toggleNav(){
+                document.querySelector(".navbar").classList.toggle("navbar-open");
+        }
+    </script>
 </body>
 </html>
