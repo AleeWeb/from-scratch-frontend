@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tab Slider</title>
     <link rel="stylesheet" href="vtabs.css" />
-    <script src="vtabs.js"></script>
 </head>
 <body>
 
@@ -51,12 +50,25 @@
 
 <script>
     function setupTabs() {
-        document.querySelectorAll(".tabs_content").forEach(button => {
+        document.querySelectorAll(".tabs-btn").forEach(button => {
             button.addEventListener("click", () => {
-                //Future code
+                const sideBar = button.parentElement;
+                const tabsContainer = sideBar.parentElement;
+                const tabNumber = button.dataset.forTab; //Converts from data-for-tab to dataforTab
+                const tabToActivate = tabsContainer.querySelector('.tabs_content[data-tab="$(tagNumber}"]');
+
+                console.log(sidbeBar);
+                console.log(tabsContainer);
+                console.log(tabNumber);
+                console.log(tabToActivate);
+
             });
         });
     }
+
+    document.addEventListener("DOMContentLoader", () => {
+        setupTabs();
+    });
 </script>
 </body>
 </html>
