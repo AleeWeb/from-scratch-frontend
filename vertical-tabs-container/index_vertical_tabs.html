@@ -56,12 +56,10 @@
                 const tabsContainer = sideBar.parentElement;
                 const tabNumber = button.dataset.forTab; //Converts from data-for-tab to dataforTab
                 const tabToActivate = tabsContainer.querySelector('.tabs_content[data-tab="$(tagNumber}"]');
-
-                console.log(sidbeBar);
-                console.log(tabsContainer);
-                console.log(tabNumber);
-                console.log(tabToActivate);
-
+           
+                sideBar.querySelectorAll(".tabs-btn").forEach(button => {
+                         button.classList.remove("tabs-button-active");
+                });
             });
         });
     }
